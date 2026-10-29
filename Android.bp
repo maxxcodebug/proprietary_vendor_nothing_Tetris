@@ -1093,7 +1093,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so",
             ],
             shared_libs: [
-                "vendor.mediatek.hardware.bluetooth.audio@2.1",
+
                 "vendor.mediatek.hardware.bluetooth.audio-V1-ndk_vendor",
                 "android.hardware.bluetooth.audio-V3-ndk",
                 "libbase",
@@ -1133,8 +1133,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so",
             ],
             shared_libs: [
-                "vendor.mediatek.hardware.bluetooth.audio@2.1",
-                "vendor.mediatek.hardware.bluetooth.audio@2.2",
+
+
                 "vendor.mediatek.hardware.bluetooth.audio-V1-ndk_vendor",
                 "android.hardware.bluetooth.audio-V3-ndk",
                 "libbase",
@@ -2837,8 +2837,8 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbluetooth_audio_session_mediatek.so",
             ],
             shared_libs: [
-                "vendor.mediatek.hardware.bluetooth.audio@2.1",
-                "vendor.mediatek.hardware.bluetooth.audio@2.2",
+
+
                 "libbase",
                 "libcutils",
                 "libfmq",
@@ -31042,4 +31042,16 @@ install_symlink {
     soc_specific: true,
     installed_location: "lib64/sc202cssj_mipi_raw_tuning.so",
     symlink_target: "/vendor/lib64/mt6878/sc202cssj_mipi_raw_tuning.so",
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_mediatek_hardware_bluetooth_audio_interface",
+    interfaces: [
+        "vendor.mediatek.hardware.bluetooth.audio@2.1::IBluetoothAudioPort",
+        "vendor.mediatek.hardware.bluetooth.audio@2.1::IBluetoothAudioProvider",
+        "vendor.mediatek.hardware.bluetooth.audio@2.1::IBluetoothAudioProvidersFactory",
+        "vendor.mediatek.hardware.bluetooth.audio@2.2::IBluetoothAudioPort",
+        "vendor.mediatek.hardware.bluetooth.audio@2.2::IBluetoothAudioProvider",
+        "vendor.mediatek.hardware.bluetooth.audio@2.2::IBluetoothAudioProvidersFactory",
+    ],
 }
